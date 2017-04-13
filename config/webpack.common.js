@@ -78,7 +78,7 @@ module.exports = function (options) {
          * See: http://webpack.github.io/docs/configuration.html#module
          */
         module: {
-            loaders: [{
+            rules: [{
                     test: /\.ts?$/,
                     loader: "ts-loader",
                 }, {
@@ -107,7 +107,7 @@ module.exports = function (options) {
                 }, {
                     test: /\.scss$/,
                     exclude: /node_modules/,
-                    loaders: ["raw-loader", "sass-loader"], // sass-loader not scss-loader
+                    use: ["raw-loader", "sass-loader"], // sass-loader not scss-loader
                 },
                 // /* Raw loader support for *.html
                 //  * Returns file content as string
